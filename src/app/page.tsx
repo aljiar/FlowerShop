@@ -51,7 +51,7 @@ export default async function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {categories.map((category, idx) => (
-              <Link href="/productos" key={idx} className="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
+              <Link href={`/categorias/${encodeURIComponent(category.name.toLowerCase())}`} key={idx} className="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
                 <Image 
                   src={category.image} 
                   alt={category.name} 

@@ -19,3 +19,17 @@ body {
   font-family: var(--font-sans), sans-serif;
 }
 /* Trigger HMR reload */
+
+/* Fixes para el autocompletado en el mapa Leaflet (Evitar texto blanco sobre fondo blanco) */
+.leaflet-control-geosearch form input {
+  color: #000000 !important;
+}
+.leaflet-control-geosearch form input::placeholder {
+  color: #666666 !important;
+}
+.leaflet-control-geosearch .results > * {
+  color: #000000 !important;
+}
+.leaflet-control-geosearch .results > *:hover {
+  background-color: #f0f0f0 !important;
+}
